@@ -387,7 +387,6 @@ int work_07_01(int avgc, char* argv[])
 		// （视野，一般设置成45，宽高比，近平面（所有在近平面和远平面内且处于平截头体内的顶点都会被渲染），远平面）
 		// 近平面若设置过大会将靠近摄像机的坐标（在0.0f和10.0f之间）都裁剪掉
 		projection = glm::perspective(glm::radians(camera.Zoom), (float)screenWidth / (float)screenHeight, 0.1f, 100.0f);
-		ourShader.setMat4("projection", projection);
 
 		ourShader.setMat4("view", view);
 		ourShader.setMat4("projection", projection);

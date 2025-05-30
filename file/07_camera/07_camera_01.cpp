@@ -326,7 +326,7 @@ int solve_07_01(int avgc, char* argv[])
 	// 解绑定VBO
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	// 解绑定EBO
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);;
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
 	// 设置线框模式
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -365,7 +365,6 @@ int solve_07_01(int avgc, char* argv[])
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-
 		// 使用着色器
 		ourShader.use();
 
@@ -379,7 +378,6 @@ int solve_07_01(int avgc, char* argv[])
 		// （视野，一般设置成45，宽高比，近平面（所有在近平面和远平面内且处于平截头体内的顶点都会被渲染），远平面）
 		// 近平面若设置过大会将靠近摄像机的坐标（在0.0f和10.0f之间）都裁剪掉
 		projection = glm::perspective(glm::radians(fov), (float)screenWidth / (float)screenHeight, 0.1f, 100.0f);
-		ourShader.setMat4("projection", projection);
 
 		ourShader.setMat4("view", view);
 		ourShader.setMat4("projection", projection);

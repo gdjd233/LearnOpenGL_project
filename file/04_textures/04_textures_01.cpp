@@ -258,6 +258,7 @@ int solve_04_01(int avgc, char* argv[])
 	ourShader.setInt("texture2", 1);
 
 
+
 	// 函数在我们每次循环的开始前检查一次GLFW是否被要求退出，如果是的话，该函数返回true，渲染循环将停止运行，之后我们就可以关闭应用程序。
 	while (!glfwWindowShouldClose(window))
 	{
